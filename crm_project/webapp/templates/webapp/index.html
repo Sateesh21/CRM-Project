@@ -1,0 +1,29 @@
+{% extends 'webapp/base.html' %}
+
+{% block content %}
+    
+    <body>
+
+        <br>
+        <br>
+
+        <div class="text-center">
+
+            <h3> Project CRM: Elevate Your Customer Management! </h3>
+
+            <br>
+
+            <h5> Simplify your record tracking! </h5>
+
+            <hr>
+            <br>
+
+            <a class="btn btn-info" type="button" href="{% url 'register' %}"> Create your account &nbsp; <i class="fa fa-user-plus" aria-hidden="true"></i> </a>
+
+        </div> 
+
+        {% comment %} original call class="btn btn-primary" {% endcomment %}
+    </body>        
+
+
+{% endblock %}

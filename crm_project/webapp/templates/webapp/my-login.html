@@ -1,0 +1,58 @@
+{% extends 'webapp/base.html' %}
+
+{% load crispy_forms_tags %}
+
+<link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/superhero/bootstrap.min.css">
+
+
+{% block content %}
+
+    <body>
+
+        <div class="container bg-dark shadow-md p-5 form-layout">
+
+            <h3> Pass Your Credentials here, to Login !! </h3>
+
+            <hr>
+            <br>
+
+            <form method="POST" autocomplete="off">
+
+                {% csrf_token %}
+
+                {{form.username|as_crispy_field}}
+
+                <br>
+
+                {{form.password|as_crispy_field}}
+
+                <br>
+
+                <button type="submit" class="btn btn-secondary w-100 btn-block p-2"> Login &nbsp; <i class="fa fa-key" aria-hidden="true"></i> </button>
+
+
+            </form>
+
+            <br>
+
+            <div class="text-center">
+
+                <p> Don't have an account? Then 👇</p> <a href="{% url 'register' %}"> Register </a>
+
+            </div>
+
+
+        </div>
+
+        <br>
+
+    </body>
+
+{% endblock %}
+
+
+
+
+
+
+
